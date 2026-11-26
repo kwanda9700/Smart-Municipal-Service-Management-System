@@ -1,1 +1,74 @@
-
+{
+  "info": {
+    "name": "Smart Municipal Service API",
+    "_postman_id": "c4c4a4f4-1200-4b2d-8c8e-1b2a6b2f4d10",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create service request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"citizenName\": \"Thando Jacobs\",\n  \"requestType\": \"ROAD_REPAIR\",\n  \"description\": \"A pothole is causing a hazard outside 12 Main Road.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/requests",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "requests"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get all requests",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/requests",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "requests"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get request by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/requests/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "requests",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
